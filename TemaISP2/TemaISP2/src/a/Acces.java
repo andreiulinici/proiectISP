@@ -14,7 +14,7 @@ parcursi intre acestea. Sistemul permite generarea de rapoarte.
 
 package a;
 
-public class Acces {
+public class Acces { // Asociatie cu Turist
 	String codCartela;
 	int pret;
 	String codTurist;
@@ -36,6 +36,26 @@ public class Acces {
 	
 	public String getCodCartela() {
 		return codCartela;
+	}
+
+	public String getCodTurist() {
+		return codTurist;
+	}
+
+	public void setCodTurist(String codTurist) {
+		this.codTurist = codTurist;
+	}
+
+	public void setCodCartela(String codCartela) {
+		this.codCartela = codCartela;
+	}
+
+	public int getPret() {
+		return pret;
+	}
+
+	public void setPret(int pret) {
+		this.pret = pret;
 	}
 
 	public void deleteAccess(Turist p) {

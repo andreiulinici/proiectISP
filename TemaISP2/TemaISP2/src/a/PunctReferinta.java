@@ -1,18 +1,36 @@
 package a;
 import java.util.ArrayList;
 
-public class PunctReferinta {
+public class PunctReferinta {	// Compozitie cu Partie
 	double cx;
 	double cy;
 	double alt;
 
-	public PunctReferinta(double x,double y,double z) {
-		this.cx=x;
-		this.cy=y;
-		this.alt=z;
+	public double getCx() {
+		return cx;
 	}
 
-	public void SetCoordonate(double x,double y,double z) {
+	public void setCx(double cx) {
+		this.cx = cx;
+	}
+
+	public double getCy() {
+		return cy;
+	}
+
+	public void setCy(double cy) {
+		this.cy = cy;
+	}
+
+	public double getAlt() {
+		return alt;
+	}
+
+	public void setAlt(double alt) {
+		this.alt = alt;
+	}
+
+	public PunctReferinta(double x,double y,double z) {
 		this.cx=x;
 		this.cy=y;
 		this.alt=z;

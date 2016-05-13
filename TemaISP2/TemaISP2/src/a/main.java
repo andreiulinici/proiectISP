@@ -16,6 +16,10 @@ public class main {
 	Boolean haveInstructor=true;
 	Boolean haveAccess=true;
 	Boolean facturaPlatita=true;
+	int pC = 30;	// Pret Cartela
+	int pC1 = 50;
+	int pI = 80;	// Pret Instructor
+	int pI1 = 100;
 	
 	Transport t=new Transport("Telescaun");
 	Transport t1=new Transport("Teleski");
@@ -29,9 +33,9 @@ public class main {
 	tt1.assignInstructor(p);
 	tt1.assignTransport(t1);
 	
-	Acces a=new Acces(codCartela,30,codTurist);
-	Acces a1=new Acces("cartela002",50,"client002");
-	
+	Acces a=new Acces(codCartela,pC,codTurist);
+	Acces a1=new Acces("cartela002",pC1,"client002");
+		
 	//Traseu()
 	
 	tt.addAccess(a);
@@ -50,12 +54,13 @@ public class main {
 	tt.setTablouPuncteReferinta(list);
 	Double distance=tt.calculDistantaParcursa();
 	
-	
-	System.out.println("Distanta parcursa de " + tt.Nume+ " este:"+distance);
-	
-	
 	tt.afisareTurist();
-	tt1.afisareTurist();	
+	tt1.afisareTurist();
+	
+	System.out.println("\nDistanta parcursa de " + tt.Nume+ " este:"+distance+"\n");
+	
+	Factura f = new Factura("factura001", codTurist, pC+pI);
+	f.afisareF(tt);
 	
 	}
 }
