@@ -2,15 +2,15 @@ package a;
 import java.util.ArrayList;
 
 public class EvidentaTuristi {
-ArrayList<Turist> TuristiActivi;
-ArrayList<Turist> TuristiInactivi;
+public ArrayList<Turist> TuristiActivi;
+public ArrayList<Turist> TuristiInactivi;
 
 public void addTurist(Turist p) {
 	if (p.isActive) {
-		TuristiActivi.add(p);
+		this.TuristiActivi.add(p);
 	}
 	else {
-		TuristiInactivi.add(p);
+		this.TuristiInactivi.add(p);
 	}
 }
 
@@ -22,5 +22,10 @@ public void deleteTurist(Turist p) {
 	else {
 		TuristiInactivi.remove(p);
 	}
+}
+
+
+public ArrayList<Turist> getTuristiA() {
+	return this.TuristiActivi;
 }
 }

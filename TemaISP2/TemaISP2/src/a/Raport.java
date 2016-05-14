@@ -21,8 +21,7 @@ void salveazaIstoric(){
 
     try {  
 
-        // This block configure the logger with handler and formatter  
-      //fh = new FileHandler("C:/Users/Maryan/Desktop/TemaISP2/TemaISP2/src/Raport.log");  
+         
     	fh = new FileHandler("C:/Users/Andrei Ulinici/Documents/GitHub/proiectISP/TemaISP2/TemaISP2/src/Raport1.log");
         logger.addHandler(fh);
         SimpleFormatter formatter = new SimpleFormatter();  
@@ -34,17 +33,26 @@ void salveazaIstoric(){
         logger.info("Varsta turist:"+t.varsta);
         logger.info("CNP:"+t.CNP);
         if (t.haveInstructor){
-        	logger.info("Instructor:"+t.Instructor);
+        	logger.info("Instructor:"+t.Instructor.Nume+" "+t.Instructor.Prenume+" "+t.Instructor.varsta);
+        	logger.info("CodInstructor:"+t.Instructor.code);
         }
         if (t.haveAccess) {
-        	logger.info("Access data:"+t.Access);
+        	logger.info("Date Acces");
+        	logger.info("Cod Cartela:"+t.Access.codCartela);
+        	logger.info("Pret Cartela:"+t.Access.pret);
+        	logger.info("CodTurist:"+t.Access.codTurist);	
+        	
         }
-        logger.info("Traseu turist:"+t.Traseu);
-        logger.info("Traseu turist:");
-        logger.info("Transport:"+t.Transport);
+        logger.info("Transport:"+t.Transport.tipTransport);
+       
+        logger.info("Traseu turist:"+t.traseu);
+        double x=t.calculDistantaParcursa();
+        logger.info("Distanta parcursa de turist:"+x+"m");
         
+       // logger.info("Transport:"+t.Transport);
 
-    } catch (SecurityException e) {  
+    
+    	} catch (SecurityException e) {  
         e.printStackTrace();  
     } catch (IOException e) {  
         e.printStackTrace();  

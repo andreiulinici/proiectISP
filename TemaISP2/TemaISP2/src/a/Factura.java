@@ -2,7 +2,7 @@ package a;
 
 import java.util.ArrayList;
 
-public class Factura {	// Asociatie cu Turist
+public class Factura {	// Compozitie cu Turist
 	String codFactura;
 	String codTurist;
 	int pret;

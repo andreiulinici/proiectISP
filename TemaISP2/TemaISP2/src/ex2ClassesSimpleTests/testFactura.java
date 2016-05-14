@@ -20,7 +20,7 @@ public class testFactura {
 	Turist turist = new Turist("Surdu","Marian","1940203146252",22,true,codTurist,true,true);;
 	Factura f = new Factura(codFactura, codTurist, pret);
 	
-	/*@Before	
+	@Before	
 	public void setUp() throws Exception {
         //super.setUp();
         turist = new Turist("Surdu","Marian","1940203146252",22,true,codTurist,true,true);
@@ -30,7 +30,7 @@ public class testFactura {
 	public void tearDown() throws Exception {
         //super.tearDown();
         turist = null;
-	}*/
+	}
 	
 	@Test
 	public void testPret() {

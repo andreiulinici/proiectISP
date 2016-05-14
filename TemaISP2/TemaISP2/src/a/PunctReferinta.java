@@ -1,7 +1,7 @@
 package a;
 import java.util.ArrayList;
 
-public class PunctReferinta {	// Compozitie cu Partie
+public class PunctReferinta {	// Compozitie cu Turist
 	double cx;
 	double cy;
 	double alt;

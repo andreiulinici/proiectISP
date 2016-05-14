@@ -131,6 +131,7 @@ public class Turist extends Persoana {
 	public ArrayList<PunctReferinta> getTablouPuncteReferinta() {
 		return tablouPuncteReferinta;
 	}
+	
 
 	public Boolean obtineAccess( Boolean b,Acces a ) {
 		this.haveAccess=b;
@@ -142,6 +143,10 @@ public class Turist extends Persoana {
 		}
 		return b;
 	
+	}
+	
+	public Boolean getAcces() {
+		return this.haveAccess;
 	}
 
 	public Boolean platireFactura() {

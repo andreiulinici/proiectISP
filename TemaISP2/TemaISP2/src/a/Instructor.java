@@ -24,7 +24,15 @@ public void afisareI() {
 public void emiteFactura(Factura f) {
 	System.out.println("Factura emisa:");
 	System.out.println(f.codFactura);
-	System.out.println(f.codClient);
+	System.out.println(f.codTurist);
 	
 }
+public void assignClient(){
+	this.numarClienti+=1;
+}
+
+public int getTuristiInscrisi() {
+	return this.numarClienti;
+}
+
 }

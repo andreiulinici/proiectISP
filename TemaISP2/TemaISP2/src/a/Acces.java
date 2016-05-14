@@ -14,7 +14,7 @@ parcursi intre acestea. Sistemul permite generarea de rapoarte.
 
 package a;
 
-public class Acces { // Asociatie cu Turist
+public class Acces { // Compozitie cu Turist
 	String codCartela;
 	int pret;
 	String codTurist;

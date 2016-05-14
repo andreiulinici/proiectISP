@@ -40,12 +40,7 @@ public class main {
 	
 	tt.addAccess(a);
 	tt1.addAccess(a1);
-	Raport raport=new Raport();
-	raport.assignRaport(tt);
 	
-	//tt.tablouPuncteReferinta.add(punct);
-	//tt.tablouPuncteReferinta.add(punct1);
-	//Double distance=tt.calculDistantaParcursa();
 	ArrayList<PunctReferinta> list = new ArrayList<PunctReferinta>();
 	list.add(punct);
 	list.add(punct1);
@@ -60,6 +55,22 @@ public class main {
 	System.out.println("\nDistanta parcursa de " + tt.Nume+ " este:"+distance+"\n");
 	
 	Factura f = new Factura("factura001", codTurist, pC+pI);
+	
+	ArrayList<PunctReferinta> list5 = new ArrayList<PunctReferinta>();
+	list5.add(punct);
+	list5.add(punct1);
+	list5.add(punct3);
+	list5.add(punct4);
+	tt.setTablouPuncteReferinta(list5);
+	Double distance5=tt.calculDistantaParcursa();
+	Partie partie=new Partie("mediu",punct,punct3);
+	ArrayList<Partie> list22 = new ArrayList<Partie>();
+	list22.add(partie);
+	Traseu tr=new Traseu(list22);
+	
+	tt.setTraseu(tr);
+	Raport raport=new Raport();
+	raport.assignRaport(tt);
 	f.afisareF(tt);
 	
 	}
